@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "when2meet"
+version = "0.1.0"
+description = "일정 공유 앱"
+authors = ["gkw314 <go980314@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{ include = "when2meet" }]
+# Poetry CLI가 정상 작동하도록 [tool.poetry] 블록 사용
+
+[tool.poetry.dependencies]
+python = ">=3.12"
+fastapi = "^0.115.12"
+uvicorn = "^0.34.0"
+
+[tool.poetry.group.dev.dependencies]
+black = "24.3.0"
+ruff = "0.8.2"
+isort = "5.13.2"
+mypy = "^1.15.0"
+pytest = "^8.3.5"
+
+[tool.black]
+line-length = 100
+
+[tool.ruff]
+target-version = "py313"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
